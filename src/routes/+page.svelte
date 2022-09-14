@@ -189,7 +189,7 @@
 								{#if person.team === 'orga' && person.title !== 'Chief of Photography' && person.title !== 'Chief of Media'}
 									<div
 										class="card"
-										style="display:flex; justify-content: center; align-content: center;"
+										style="display:flex; text-align: center;"
 										on:click={() => (showModal[person.index] = true)}
 									>
 										<OrganizerProfile
