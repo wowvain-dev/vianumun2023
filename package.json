@@ -33,9 +33,11 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"bootstrap-icons": "^1.10.1",
 		"daisyui": "^2.38.0",
 		"svelte-device-detector": "^0.2.2",
 		"svelte-inview": "^3.0.1",
-		"svelte-viewport-info": "^1.0.0"
+		"svelte-viewport-info": "^1.0.0",
+		"ua-parser-js": "^1.0.32"
 	}
 }

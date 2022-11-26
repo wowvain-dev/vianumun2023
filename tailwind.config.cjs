@@ -2,7 +2,11 @@
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {}
+		extend: {
+			screens: {
+				'betterhover': {'raw': '(hover: hover)'},
+			}
+		}
 	},
 	plugins: [require('daisyui')],
 	daisyui: {
@@ -13,8 +17,8 @@ module.exports = {
                     "primary-content": '#fff',
 					secondary: '#356359',
                     "secondary-content": '#fff',
-                  accent: '#162F29',
-                  "accent-content": '#fff',
+                  	accent: '#162F29',
+                  	"accent-content": '#fff',
 					neutral: '#548278',
                     "neutral-content": '#1d423a',
 					'base-100': '#FFFFFF',

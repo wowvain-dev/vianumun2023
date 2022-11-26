@@ -8,6 +8,7 @@
 	import { onMount } from 'svelte';
 
 	let toggleNavbar = false;
+	let toggleNavbar1 = false;
 
 	// import chairpersons from '../components/chairpersons.json';
 	import MediaQuery from '../components/MediaQuery.svelte';
@@ -18,13 +19,8 @@
 	});
 </script>
 
-{#if toggleNavbar}
-	<div in:fade|local out:fly|local={{ y: -200, duration: 1000 }}>
-		<Navbar />
-	</div>
-{:else}
-	<div />
-{/if}
+<Navbar isVisible={toggleNavbar || toggleNavbar1}/>
+
 <div class="flex-col mb-32">
 	<div
 		id="hero_content"
@@ -49,175 +45,169 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex mx-[48vw] mt-5 animate-pulse justify-center content-center">
-		<a href="#profiles" class="h-auto w-16 flex-none">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				xmlns:xlink="http://www.w3.org/1999/xlink"
-				version="1.1"
-				viewBox="0 0 256 256"
-				xml:space="preserve"
+
+	<section id="team">
+		<div class="flex justify-center content-center mt-8 mb-20">
+			<a class="animate-bounce bg-white p-2 w-10 h-10 ring-1 ring-slate-900/5 shadow-xl
+					rounded-full flex items-center justify-center"
+			   href="#team"
 			>
-				<defs />
-				<g
-					style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
-					transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
-				>
-					<polygon
-						points="0,38.92 2.83,36.08 45,78.25 87.17,36.08 90,38.92 45,83.92 "
-						style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #7a5c58; fill-rule: nonzero; opacity: 1;"
-						transform="  matrix(1 0 0 1 0 0) "
-					/>
-					<polygon
-						points="0,8.92 2.83,6.08 45,48.25 87.17,6.08 90,8.92 45,53.92 "
-						style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #7a5c58; fill-rule: nonzero; opacity: 1;"
-						transform="  matrix(1 0 0 1 0 0) "
-					/>
-				</g>
-			</svg>
-		</a>
-	</div>
-
-	<div
-		class="flex flex-col px-10 w-full mt-20 text-neutral"
-		style="align-content: center; justify-content: center; display: flex;"
-	>
-		<span class="divider uppercase text-xl text-center">The Academic Team</span>
-	</div>
-
-	<div class="flex" style="display: flex; justify-content: center; align-content: center;">
-		<div
-			class="mt-10 w-[90vw]"
-			use:inview={{}}
-			on:change={(event) => {
-				const { inView, entry, scrollDirection, observer, node } = event.detail;
-			}}
-			on:enter={(event) => {
-				const { inView, entry, scrollDirection, observer, node } = event.detail;
-				toggleNavbar = true;
-				console.log(toggleNavbar);
-			}}
-			on:leave={(event) => {
-				const { inView, entry, scrollDirection, observer, node } = event.detail;
-				toggleNavbar = false;
-				console.log(toggleNavbar);
-			}}
-		>
-			<MediaQuery query="(max-width: 1023px)" let:matches>
-				{#if matches}
-					<div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
-						{#each chairpersons as person}
-							{#if person.team === 'acad' && person.name !== 'Lucian Cismaru'}
-								<div style="display:flex; justify-content: center; align-content: center;">
-									<OrganizerProfile name={person.name} title={person.title} image={person.image} />
-								</div>
-							{/if}
-						{/each}
-					</div>
-					<div class="mt-10" style="display:flex; justify-content: center; align-content: center;">
-						<OrganizerProfile
-								width="width: calc(40vw-5rem);"
-								name={chairpersons[3].name}
-								title={chairpersons[3].title}
-								image={chairpersons[3].image}
-						/>
-					</div>
-				{/if}
-			</MediaQuery>
-			<MediaQuery query="(min-width: 1024px)" let:matches>
-				{#if matches}
-					<div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
-						{#each chairpersons as person}
-							{#if person.team === 'acad'}
-								<div style="display:flex; justify-content: center; align-content: center;">
-									<OrganizerProfile name={person.name} title={person.title} image={person.image} />
-								</div>
-							{/if}
-						{/each}
-					</div>
-				{/if}
-			</MediaQuery>
+				<svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round"
+					 stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="#356359">
+					<path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+				</svg>
+			</a>
 		</div>
-	</div>
-
-	<div
-			class="flex flex-col px-10 w-full mt-20 text-neutral"
-			style="align-content: center; justify-content: center; display: flex;"
-	>
-		<span class="divider uppercase text-xl text-center">The Organizing Team</span>
-	</div>
-
-	<div class="flex" style="display: flex; justify-content: center; align-content: center;">
 		<div
-				class="mt-10 w-[90vw]"
-				use:inview={{}}
-				on:change={(event) => {
+				class="flex flex-col px-10 w-full text-neutral"
+				style="align-content: center; justify-content: center; display: flex;"
+		>
+			<span class="divider uppercase text-xl text-center">The Academic Team</span>
+		</div>
+
+		<div class="flex" style="display: flex; justify-content: center; align-content: center;">
+			<div
+					class="mt-10 w-[90vw]"
+					use:inview={{}}
+					on:change={(event) => {
 				const { inView, entry, scrollDirection, observer, node } = event.detail;
 			}}
-				on:enter={(event) => {
+					on:enter={(event) => {
+				const { inView, entry, scrollDirection, observer, node } = event.detail;
+				toggleNavbar1 = true;
+			}}
+					on:leave={(event) => {
+				const { inView, entry, scrollDirection, observer, node } = event.detail;
+				toggleNavbar1 = false;
+			}}
+			>
+				<MediaQuery query="(max-width: 1023px)" let:matches>
+					{#if matches}
+						<div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+							{#each chairpersons as person}
+								{#if person.team === 'acad' && person.name !== 'Lucian Cismaru'}
+									<div style="display:flex; justify-content: center; align-content: center;">
+										<OrganizerProfile name={person.name} title={person.title} image={person.image}
+														  link={chairpersons[3].link}
+										/>
+									</div>
+								{/if}
+							{/each}
+						</div>
+						<div class="mt-10" style="display:flex; justify-content: center; align-content: center;">
+							<OrganizerProfile
+									width="width: calc(40vw-5rem);"
+									name={chairpersons[3].name}
+									title={chairpersons[3].title}
+									image={chairpersons[3].image}
+									link={chairpersons[3].link}
+							/>
+						</div>
+					{/if}
+				</MediaQuery>
+				<MediaQuery query="(min-width: 1024px)" let:matches>
+					{#if matches}
+						<div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
+							{#each chairpersons as person}
+								{#if person.team === 'acad'}
+									<div style="display:flex; justify-content: center; align-content: center;">
+										<OrganizerProfile name={person.name} title={person.title} image={person.image}
+														  link={person.link}
+										/>
+									</div>
+								{/if}
+							{/each}
+						</div>
+					{/if}
+				</MediaQuery>
+			</div>
+		</div>
+
+		<div
+				class="flex flex-col px-10 w-full mt-20 text-neutral"
+				style="align-content: center; justify-content: center; display: flex;"
+		>
+			<span class="divider uppercase text-xl text-center">The Organizing Team</span>
+		</div>
+
+		<div class="flex" style="display: flex; justify-content: center; align-content: center;">
+			<div
+					class="mt-10 w-[90vw]"
+					use:inview={{}}
+					on:change={(event) => {
+				const { inView, entry, scrollDirection, observer, node } = event.detail;
+			}}
+					on:enter={(event) => {
 				const { inView, entry, scrollDirection, observer, node } = event.detail;
 				toggleNavbar = true;
 				console.log(toggleNavbar);
 			}}
-				on:leave={(event) => {
+					on:leave={(event) => {
 				const { inView, entry, scrollDirection, observer, node } = event.detail;
 				toggleNavbar = false;
 				console.log(toggleNavbar);
 			}}
-		>
-			<MediaQuery query="(max-width: 1023px)" let:matches>
-				{#if matches}
-					<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
-						{#each chairpersons as person}
-							{#if person.team === 'orga' &&
-									person.title !== 'Chief of Photography' &&
-									person.title !== 'Chief of Media'}
-								<div style="display:flex; justify-content: center; align-content: center;">
-									<OrganizerProfile name={person.name} title={person.title} image={person.image} />
-								</div>
-							{/if}
-						{/each}
-					</div>
-					<div class="mt-10" style="display:flex; justify-content: center; align-content: center;">
-						<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-5">
+			>
+				<MediaQuery query="(max-width: 1023px)" let:matches>
+					{#if matches}
+						<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+							{#each chairpersons as person}
+								{#if person.team === 'orga' &&
+								person.title !== 'Chief of Photography' &&
+								person.title !== 'Chief of Media'}
+									<div style="display:flex; justify-content: center; align-content: center;">
+										<OrganizerProfile name={person.name} title={person.title} image={person.image}
+														  link={person.link}
+										/>
+									</div>
+								{/if}
+							{/each}
+						</div>
+						<div class="mt-10" style="display:flex; justify-content: center; align-content: center;">
+							<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-5">
+								<OrganizerProfile
+										width="width: calc(40vw-5rem);"
+										name={chairpersons[chairpersons.length - 2].name}
+										title={chairpersons[chairpersons.length - 2].title}
+										image={chairpersons[chairpersons.length - 2].image}
+										link={chairpersons[chairpersons.length - 2].link}
+								/>
+								<OrganizerProfile
+										width="width: calc(40vw-5rem);"
+										name={chairpersons[chairpersons.length - 1].name}
+										title={chairpersons[chairpersons.length - 1].title}
+										image={chairpersons[chairpersons.length - 1].image}
+										link={chairpersons[chairpersons.length - 1].link}
+								/>
+							</div>
+						</div>
+					{/if}
+				</MediaQuery>
+				<MediaQuery query="(min-width: 1024px)" let:matches>
+					{#if matches}
+						<div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
+							{#each chairpersons as person}
+								{#if person.team === 'orga' && person.title !== 'Chief of Media'}
+									<div style="display:flex; justify-content: center; align-content: center;">
+										<OrganizerProfile name={person.name} title={person.title} image={person.image} />
+									</div>
+								{/if}
+							{/each}
+						</div>
+						<div class="mt-10" style="display:flex; justify-content: center; align-content: center;">
 							<OrganizerProfile
-									width="width: calc(40vw-5rem);"
-									name={chairpersons[chairpersons.length - 2].name}
-									title={chairpersons[chairpersons.length - 2].title}
-									image={chairpersons[chairpersons.length - 2].image}
-							/>
-							<OrganizerProfile
-									width="width: calc(40vw-5rem);"
 									name={chairpersons[chairpersons.length - 1].name}
 									title={chairpersons[chairpersons.length - 1].title}
 									image={chairpersons[chairpersons.length - 1].image}
 							/>
 						</div>
-					</div>
-				{/if}
-			</MediaQuery>
-			<MediaQuery query="(min-width: 1024px)" let:matches>
-				{#if matches}
-					<div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
-						{#each chairpersons as person}
-							{#if person.team === 'orga' && person.title !== 'Chief of Media'}
-								<div style="display:flex; justify-content: center; align-content: center;">
-									<OrganizerProfile name={person.name} title={person.title} image={person.image} />
-								</div>
-							{/if}
-						{/each}
-					</div>
-					<div class="mt-10" style="display:flex; justify-content: center; align-content: center;">
-						<OrganizerProfile
-								name={chairpersons[chairpersons.length - 1].name}
-								title={chairpersons[chairpersons.length - 1].title}
-								image={chairpersons[chairpersons.length - 1].image}
-						/>
-					</div>
-				{/if}
-			</MediaQuery>
+					{/if}
+				</MediaQuery>
+			</div>
 		</div>
-	</div>
+
+	</section>
+
 </div>
 
 <style>

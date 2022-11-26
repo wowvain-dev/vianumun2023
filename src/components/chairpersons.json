@@ -3,54 +3,63 @@
     "name": "Natalia Velea-Grumezea",
     "title": "Secretary-General",
     "image": "/profile_pictures/nati-secretary_general.jpg",
+    "link": "https://youtube.com",
     "team": "acad"
   },
   {
     "name": "Mara Andronache",
     "title": "Deputy Secretary-General",
     "image": "/profile_pictures/mara_andronache-deputy_secretary_general.jpg",
+    "link": "",
     "team": "acad"
   },
   {
     "name": "Ana Aronescu",
     "title": "President of the General Assembly",
     "image": "/profile_pictures/ana_aronescu-pga.jpg",
+    "link": "",
     "team": "acad"
   },
   {
     "name": "Lucian Cismaru",
     "title": "Deputy President of the General Assembly",
     "image": "/profile_pictures/lucian_cismaru-dpga.jpg",
+    "link": "",
     "team": "acad"
   },
   {
     "name": "Alexandra Breahna",
     "title": "Conference Manager",
     "image": "/profile_pictures/alexandra_breahna-conference_manager.jpg",
+    "link": "",
     "team": "orga"
   },
   {
     "name": "Andrei Voinea",
     "title": "Chief of Staff",
     "image": "/profile_pictures/andrei_voinea-chief_of_staff.jpg",
+    "link": "",
     "team": "orga"
   },
   {
     "name": "Miruna Neamu",
     "title": "Chief of Finance",
     "image": "/profile_pictures/neamu_miruna-chief_of_finance.jpg",
+    "link": "",
     "team": "orga"
   },
   {
     "name": "Andreea Fechet",
     "title": "Chief of Photography",
     "image": "/profile_pictures/fechet_andreea-chief_of_photo.jpg",
+    "link": "",
     "team": "orga"
   },
   {
     "name": "Mara Bogdan",
     "title": "Chief of Media",
     "image": "/profile_pictures/mara_bogdan-chief_of_media.jpg",
+    "link": "",
     "team": "orga"
   }
 ]
