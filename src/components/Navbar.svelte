@@ -5,6 +5,16 @@
 	import DeviceDetector from 'svelte-device-detector';
 
 	export let isVisible = true;
+
+	const com = ["/disec", "/international_criminal_court", "/interpol", "/legal", "/security_council", "/sochum", ""];
+
+	const committees = [];
+
+	for (let committee in com) {
+		committees.push("/committees" + com[committee]);
+	}
+	console.log(committees);
+
 </script>
 
 {#if isVisible}
@@ -36,7 +46,8 @@
 							border-2 border-transparent hover:border-base-200 " href="/about">About us</a></li>
 					{/if}
 					<li>
-						<a class="mr-5 text-base-100 uppercase border-2 border-transparent
+						{#if committees.includes($page.url.pathname)}
+						<a class="mr-5 text-base-100 uppercase border-2 border-transparent underline underline-offset-8
 								  hover:border-base-200" href="/committees">
 							Committees
 							<svg
@@ -49,25 +60,86 @@
 								<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
 							</svg>
 						</a>
+							{:else}
+							<a class="mr-5 text-base-100 uppercase border-2 border-transparent
+								  hover:border-base-200" href="/committees">
+								Committees
+								<svg
+										class="fill-current"
+										xmlns="http://www.w3.org/2000/svg"
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+								>
+									<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+								</svg>
+							</a>
+							{/if}
 						<ul class="p-2 bg-base-100 acrylic" style="background: rgba(29, 66, 58, 0.7)">
-							<li><a class="btn btn-ghost normal-case text-base-100 uppercase">
+							{#if $page.url.pathname === "/committees/disec"}
+							<li><a href="/committees/disec"
+								   class="btn btn-ghost outline outline-1 outline-base-100
+								   		 normal-case text-base-100 uppercase">
 								DISEC
 							</a></li>
-							<li><a class="btn btn-ghost normal-case text-base-100 uppercase">
+							{:else}
+								<li><a href="/committees/disec" class="btn btn-ghost normal-case text-base-100 uppercase">
+									DISEC
+								</a></li>
+							{/if}
+							{#if $page.url.pathname === "/committees/sochum"}
+							<li><a href="/committees/sochum"
+								   class="btn btn-ghost outline outline-1 outline-base-100
+								   normal-case text-base-100 uppercase">
 								SOCHUM
 							</a></li>
-							<li><a class="btn btn-ghost normal-case text-base-100 uppercase">
+							{:else}
+								<li><a href="/committees/sochum"
+									   class="btn btn-ghost normal-case text-base-100 uppercase">
+									SOCHUM
+								</a></li>
+							{/if}
+							{#if $page.url.pathname === "/committees/legal"}
+							<li><a href="/committees/legal" class="btn btn-ghost
+								outline outline-1 outline-base-100
+								normal-case text-base-100 uppercase">
 								LEGAL
 							</a></li>
-							<li><a class="btn btn-ghost normal-case text-base-100 uppercase">
+							{:else}
+								<li><a href="/committees/legal" class="btn btn-ghost normal-case text-base-100 uppercase">
+									LEGAL
+								</a></li>
+							{/if}
+							{#if $page.url.pathname === "/committees/security_council"}
+							<li><a href="/committees/security_council" class="btn btn-ghost outline outline-1 outline-base-100
+								normal-case text-base-100 uppercase">
 								Security Council
 							</a></li>
-							<li><a class="btn btn-ghost normal-case text-base-100 uppercase">
+								{:else}
+								<li><a href="/committees/security_council" class="btn btn-ghost normal-case text-base-100 uppercase">
+									Security Council
+								</a></li>
+								{/if}
+							{#if $page.url.pathname === "/committees/international_criminal_court"}
+							<li><a href="/committees/international_criminal_court" class="btn btn-ghost outline outline-1 outline-base-100
+							normal-case text-base-100 uppercase">
 								International Criminal Court
 							</a></li>
-							<li><a class="btn btn-ghost normal-case text-base-100 uppercase">
+								{:else}
+								<li><a href="/committees/international_criminal_court" class="btn btn-ghost normal-case text-base-100 uppercase">
+									International Criminal Court
+								</a></li>
+								{/if}
+							{#if $page.url.pathname === "/committees/interpol"}
+							<li><a href="/committees/interpol" class="btn btn-ghost outline outline-1 outline-base-100
+							normal-case text-base-100 uppercase">
 								INTERPOL
 							</a></li>
+								{:else}
+								<li><a href="/committees/interpol" class="btn btn-ghost normal-case text-base-100 uppercase">
+									INTERPOL
+								</a></li>
+								{/if}
 						</ul>
 					</li>
 					<li>

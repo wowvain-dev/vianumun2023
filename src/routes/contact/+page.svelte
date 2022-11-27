@@ -3,7 +3,13 @@
 </script>
 
 <div class="mt-[15vh] mb-[15vh]">
-    <h1 class="font-bold text-5xl text-center">Contact</h1>
+    <div class="text-sm breadcrumbs ml-10">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <h1 class="font-bold text-5xl text-center mt-12">Contact</h1>
 
     <div id="content" class="mx-[5vw] md:mx-[30vw]">
         <p class="mt-24"><b>The official e-mail address of VianuMUN:</b> <code

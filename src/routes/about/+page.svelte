@@ -6,10 +6,16 @@
 <div class="mt-[15vh] mb-[15vh]">
     <div style="display: flex; justify-content: center; align-content: center; flex-direction: column;">
 <!--    TODO(wowvain-dev):    fix side buttons-->
-        <div class="flex-col flex-1  mx-5 sm:mx-10  md:mx-30 lg:mx-40 justify-center">
+        <div class="flex-col flex-1  mx-10 justify-center">
+            <div class="text-sm breadcrumbs">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li>About Us</li>
+                </ul>
+            </div>
             {#if about === true}
                 <div in:fade|local>
-                    <h1 class="font-bold text-5xl text-center">About us</h1>
+                    <h1 class="font-bold text-5xl text-center mt-12">About us</h1>
                     <div class="mx-5 md:mx-10 lg:mx-32 xl:mx-48">
                         <p class="mt-24">
                             The first edition of VianuMUN took place in May 2019, bringing an innovation to the MUN world: the INTERPOL committee.
@@ -28,23 +34,17 @@
                             looking both at the organizing part and at the academic part.
                         </p>
                         <br/>
-                        <p>
+                        <p class="mb-20">
                             Our mission is to help each and every single person taking part in this conference evolve and enrich their knowledge and culture, in a prosper environment.
                             More importantly, we want this to make a difference in the MUN community,
                             helping people acknowledge the importance of speaking up and of being well informed about your surroundings.
                         </p>
-                        <br/>
-                        <br/>
-                        <p>
-                            <i>The Deputy Secretary General of VianuMUN</i>,
-                            <br/><i>Mara Andronache</i>
-                        </p>
                     </div>
                 </div>
             {:else}
-                <div in:fade|local>
-                    <h1 class="font-bold text-5xl text-center">Past topics</h1>
-                    <div class="mx-5 md:mx-10 lg:mx-32 xl:mx-48">
+                <div in:fade|local class="ml-auto mr-auto">
+                    <h1 class="font-bold text-5xl text-center mt-12">Past topics</h1>
+                    <div class="mx-5 md:mx-[20vw]">
                         <h2 class="mt-24 text-lg font-bold underline">VianuMUN 2021</h2>
                         <br/>
                         <p><b>International Court of Justice:</b> Questions relating to the Obligation to Prosecute or Extradite (Belgium vs Senegal)</p>
