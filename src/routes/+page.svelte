@@ -311,7 +311,7 @@
 {/if}
 
 {#if showModal[8]}
-	<ProfileModal name="Andreea Fechet" image="/profile_pictures/mara_bogdan-chief_of_media.jpg" visible={showModal[8]} onClose="{() => showModal[8] = false}">
+	<ProfileModal name="Mara Bogdan" image="/profile_pictures/mara_bogdan-chief_of_media.jpg" visible={showModal[8]} onClose="{() => showModal[8] = false}">
 		<div class="description indent-[5%] text-lg" style="display:flex; flex-direction: column; overflow: hidden;">
 			<p>Hey everyone! </p><br/>
 			<p>My name is Mara and I’m a sophomore at “I.L. Caragiale'' National College. I enjoy everything related to media, marketing and public relations, therefore I am beyond excited to be this edition of VianuMUN’s Chief of Media! I am a very positive person, I am eager to learn, I enjoy facing challenges and experiencing new things.</p><br/>
