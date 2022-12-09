@@ -15,18 +15,24 @@
                 </ul>
             </div>
             <div class="mt-12">
-                <img src="/legal_small.png" class="ml-auto mr-auto mb-5"/>
+                <img style="width: 300px; height: 300px" src="/LEGAL.png" class="ml-auto mr-auto mb-5"/>
             </div>
             <h1 class="font-bold text-5xl text-center">LEGAL</h1>
-            <div class="mx-10 md:mx-[25vw]">
+            
+            <div class="mx-10 md:mx-[15vw]">
                 <h2 class="text-2xl font-bold underline mt-32">Topic</h2>
                 <p class="mt-10 text-lg ml-auto mr-auto text-center">
                     Discussing the Legal and Moral Implications of Human Cloning
                 </p>
+                <h2 class="text-2xl font-bold underline mt-32">Description</h2>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">The Legal committee is the Sixth committee of the General Assembly of the United Nations. It deals primarily with legal matters and is the primary forum for the consideration of international law and other legal matters concerning the United Nations.</p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">The United Nations General Assembly has a specific responsibility to foster the gradual development of public international law, according to Article 13 of the UN Charter, it shall work with “supporting the gradual development of international law and its codification." Following precedent, this provision has been understood as a broad authorization to draft new treaties on a wide range of topics, adopt them, and recommend them to governments for signature, ratification, and accession.</p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">While international law-making conversations take place in a variety of United Nations specialised bodies depending on their actual subject area, those connected to general international law are normally held at the Sixth Committee. The Legal Committee has universal membership, which means that all United Nations member states are de jure members of the Sixth Committee.</p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">Human Cloning is a complicated subject in our social climate, considering the different approaches around the globe of this issue and its moral and legal implications. During these 3 days of intense debate, you will need to use your skills to support your country’s views over the matter and reach a satisfying conclusion for all states involved. We are sure you will bring up strong arguments in regards to this delicate topic and we are eager to see the debate unfold!</p>
                 <h2 class="mt-24 text-2xl font-bold underline">Chairpersons</h2>
                 <div class="member-grid">
                     <div on:click={() => showModal[0] = true} class="card rounded-3xl bg-base-100 betterhover:shadow-xl
-                        w-[20vw]
+                        w-[30vw]
                     ">
                         <figure class="px-10 pt-10 justify-center content-center" style="display: flex">
                             <img class="mask mask-circle" style="width: auto; height: 150px;"
@@ -39,7 +45,7 @@
                         </div>
                     </div>
                     <div on:click={() => showModal[1] = true} class="card rounded-3xl bg-base-100 betterhover:shadow-xl
-                        w-[20vw]
+                        w-[30vw]
                     ">
                         <figure class="px-10 pt-10 justify-center content-center" style="display: flex">
                             <img class="mask mask-circle" style="width: auto; height: 150px;"

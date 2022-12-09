@@ -15,16 +15,22 @@
                 </ul>
             </div>
             <div class="mt-12">
-                <img src="/WHO_small.png" class="ml-auto mr-auto mb-5"/>
+                <img style="width: 300px; height: 300px;" src="/ICC.png" class="ml-auto mr-auto mb-5"/>
             </div>
             <h1 class="font-bold text-5xl text-center">International Criminal Court</h1>
-            <div class="mx-10 md:mx-[25vw]">
+            <div class="mx-10 md:mx-[15vw]">
                 <h2 class="text-2xl font-bold underline mt-32">Topic</h2>
                 <p class="mt-10 text-lg ml-auto mr-auto text-center">The Prosecutor v. Saif Al-Islam Gaddafi</p>
+                <h2 class="text-2xl font-bold underline mt-32">Description</h2>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">Established by the Rome Statute in 1998 and seated in The Hague, Netherlands, The International Criminal Court is the only international court with jurisdiction to judge and prosecute individuals for international crimes of genocide, war crimes, or crimes against humanity. </p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">Therefore, at Vianu MUN 2023 we will be looking upon the situation in Libya (The Prosecutor v. Saif Al-Islam Gaddafi). The case goes back to February 2011, when anti-government rallies started taking place in Benghazi, due to the oppressive regime and the arrest of a human rights lawyer. Protesters called Gaddafi, the leader of the country, to step down and to release the political prisoners, but instead, Libyan security forces used water cannons and rubber bullets against the crowds, which resulted in several people being injured.</p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">The situation worsened, demonstrators taking control of Benghazi and extending the protests to Tripoli. As a result, the Libyan Government began using lethal force against people, firing live ammunition, using tanks, artillery, warplanes, and helicopter gunships to deter the crowds. Thousands of people died, went missing, or were wounded.  </p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">Although Saif Al-Islam had no official position, not only was he considered to be the second most influential person in the country, but he also had the power of a de facto prime minister, meaning that he could exercise control over crucial parts of the state apparatus.</p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">Now it’s your chance to share your take on the case, by being either a judge, or an advocate, at Vianu MUN 2023!</p>
                 <h2 class="mt-24 text-2xl font-bold underline">Chairpersons</h2>
                 <div class="member-grid">
                     <div on:click={() => showModal[0] = true} class="card rounded-3xl bg-base-100 betterhover:shadow-xl
-                        w-[20vw]
+                        w-[30vw]
                     ">
                         <figure class="px-10 pt-10 justify-center content-center" style="display: flex">
                             <img class="mask mask-circle" style="width: auto; height: 150px;"
@@ -37,7 +43,7 @@
                         </div>
                     </div>
                     <div on:click={() => showModal[1] = true} class="card rounded-3xl bg-base-100 betterhover:shadow-xl
-                        w-[20vw]
+                        w-[30vw]
                     ">
                         <figure class="px-10 pt-10 justify-center content-center" style="display: flex">
                             <img class="mask mask-circle" style="width: auto; height: 150px;"

@@ -1,10 +1,8 @@
 <script>
-    import {goto} from '$app/navigation.js'
-
 	export let image;
 	export let name;
 	export let title;
-    export let link;
+    // export let link;
 
 </script>
 
@@ -15,7 +13,6 @@
     w-[80vw] sm:w-[80vw] md:w-[30vw] lg:w-[20vw]
     justify-center content-center shadow-lg"
 	style="transition: all .2s ease-in-out;"
-    on:click={() => goto(link)}
 >
 	<figure class="px-10 pt-10 justify-center content-center" style="display: flex;">
 		<img class="mask mask-circle" style="width: auto; height: 150px;" src={image} alt="" />

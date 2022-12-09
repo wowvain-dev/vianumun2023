@@ -15,16 +15,22 @@
                 </ul>
             </div>
             <div class="mt-12">
-                <img src="/disec_small.png" class="ml-auto mr-auto mb-5"/>
+                <img style="width: 300px; height: 300px;" src="/DISEC.png" class="ml-auto mr-auto mb-5"/>
             </div>
             <h1 class="font-bold text-5xl text-center">DISEC</h1>
-            <div class="mx-10 md:mx-[25vw]">
+            <div class="mx-10 md:mx-[15vw]">
                 <h2 class="text-2xl font-bold underline mt-32">Topic</h2>
                 <p class="mt-10 text-lg ml-auto mr-auto text-center">Combating the Threat of Bio-Terrorism after the COVID-19 Pandemic</p>
+                <h2 class="text-2xl font-bold underliner mt-32">Description</h2>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">The Disarmament and International Security Committee (DISEC) is the First Committee of the United Nations General Assembly. The committee concerns itself with questions of international importance regarding the security and demilitarization throughout all countries and regions, along with ensuring that citizens across the globe remain protected.</p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">This Vianu MUN’s edition DISEC topic is combating the Threat of Bio-Terrorism after the Covid-19 Pandemic. Bioterrorism is the deliberate use of biological agents (bacteria, viruses, fungi) to harm or just frighten the people. It is related to the military use of biological, chemical, and nuclear weapons.</p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">Attacks with biological agents are among the most dangerous and deceptive among the other forms of attacks aforementioned. Attacks could occur without being detected for a long time, potentially exposing a vast number of people, who are unaware of the threat.</p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">The United Nations remains on the forefront of the fight against bio-terrorism, passing resolutions and calling on states to do more to ensure their citizens safety. We need you, esteemed delegates, to solve, once forever, this issue! Join this challenge by signing up for the DISEC committee!</p>
                 <h2 class="mt-24 text-2xl font-bold underline">Chairpersons</h2>
                 <div class="member-grid">
+                    <!-- svelte-ignore a11y-click-events-have-key-events -->
                     <div on:click={() => showModal[0] = true} class="card rounded-3xl bg-base-100 betterhover:shadow-xl
-                        w-[20vw]
+                        w-[30vw]
                     ">
                         <figure class="px-10 pt-10 justify-center content-center" style="display: flex">
                             <img class="mask mask-circle" style="width: auto; height: 150px;"
@@ -36,8 +42,9 @@
                             </p>
                         </div>
                     </div>
+                    <!-- svelte-ignore a11y-click-events-have-key-events -->
                     <div on:click={() => showModal[1] = true} class="card rounded-3xl bg-base-100 betterhover:shadow-xl
-                        w-[20vw]
+                        w-[30vw]
                     ">
                         <figure class="px-10 pt-10 justify-center content-center" style="display: flex">
                             <img class="mask mask-circle" style="width: auto; height: 150px;"

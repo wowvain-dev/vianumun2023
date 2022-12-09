@@ -15,16 +15,20 @@
                 </ul>
             </div>
             <div class="mt-12">
-                <img src="/WHO_small.png" class="ml-auto mr-auto mb-5"/>
+                <img style="width: 300px; height: 300px;" src="/SC.png" class="ml-auto mr-auto mb-5"/>
             </div>
             <h1 class="font-bold text-5xl text-center">Security Council</h1>
-            <div class="mx-10 md:mx-[25vw]">
+            <div class="mx-10 md:mx-[15vw]">
                 <h2 class="text-2xl font-bold underline mt-32">Topic</h2>
                 <p class="mt-10 text-lg ml-auto mr-auto text-center">Addressing the Ongoing Syrian Civil War</p>
+                <h2 class="text-2xl font-bold underline mt-32">Description</h2>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">The United Nations Security Council is one of the main organs of the UN. It is tasked with ensuring peace, allowing new members into the UN and making changes to the UN Charter. It can be convened at any time when a problem arises that breaches international security and peace, and it has power to exert its will upon any country that is a UN member, being the only committee of the UN that can directly enforce its wishes upon other countries.</p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">The world is split apart by various international conflicts, but sometimes the most dangerous crises are the internal ones. The Syrian civil war is an ongoing multi-sided civil war in Syria fought between the Syrian Arab Republic led by Syrian president Bashar al-Assad (supported by domestic and foreign allies) and various domestic and foreign forces that oppose both the Syrian government and each other, in varying combinations.</p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify"> Come delegates, and find a way out of this wormhole together through various solutions, compromises, betrayals and of course arguments! So what are you waiting for? Join the Security Council!</p>
                 <h2 class="mt-24 text-2xl font-bold underline">Chairpersons</h2>
                 <div class="member-grid">
                     <div on:click={() => showModal[0] = true} class="card rounded-3xl bg-base-100 betterhover:shadow-xl
-                        w-[20vw]
+                        w-[30vw]
                     ">
                         <figure class="px-10 pt-10 justify-center content-center" style="display: flex">
                             <img class="mask mask-circle" style="width: auto; height: 150px;"
@@ -37,7 +41,7 @@
                         </div>
                     </div>
                     <div on:click={() => showModal[1] = true} class="card rounded-3xl bg-base-100 betterhover:shadow-xl
-                        w-[20vw]
+                        w-[30vw]
                     ">
                         <figure class="px-10 pt-10 justify-center content-center" style="display: flex">
                             <img class="mask mask-circle" style="width: auto; height: 150px;"

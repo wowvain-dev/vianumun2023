@@ -15,16 +15,23 @@
                 </ul>
             </div>
             <div class="mt-12">
-                <img src="/WHO_small.png" class="ml-auto mr-auto mb-5"/>
+                <img style="width: 300px; height: 300px;" src="/INTERPOL.png" class="ml-auto mr-auto mb-5"/>
             </div>
             <h1 class="font-bold text-5xl text-center">INTERPOL</h1>
-            <div class="mx-10 md:mx-[25vw]">
+            <div class="mx-10 md:mx-[15vw]">
                 <h2 class="text-2xl font-bold underline mt-32">Topic</h2>
                 <p class="mt-10 text-lg ml-auto mr-auto text-center">Counterfeit Currency and Security Documents</p>
+                <h2 class="text-2xl font-bold underline mt-32">Description</h2>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">Join the INTERPOL Committee for an overwhelmingly interactive experience, connecting the police webs on an international level, and tracking down world wide operations, with unique solutions and unexpected outcomes!</p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">Fake currency undermines economies while fraudulent identity documents give criminals freedom of movement, however tracking down the illegal factions, that are falsifying these, often proves even harder. </p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">Counterfeiting has been considered a crime dating back to antiquity. Today, the scope is wider, the impact greater, the tools more readily available and the techniques increasingly sophisticated. If left unchecked, the circulation of counterfeit currency can undermine national economies, weaken financial institutions and jeopardize people’s livelihoods.</p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">It fuels the underground economy and finances the activities of organized criminal networks and terrorists.</p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">The fraudulent use of identity and travel documents – whether they are counterfeit, forged or simply unofficial – is a major threat to both individuals and society as a whole. Recent developments in photographic, computer and printing technologies, along with the availability of low-cost equipment, have made forgery much easier.</p>
+                <p class="mt-10 text-lg ml-auto mr-auto text-justify">Can you unfold the mysteries that hide in the shadows, sneaking right under the police’s noses?</p>
                 <h2 class="mt-24 text-2xl font-bold underline">Chairpersons</h2>
                 <div class="member-grid">
                     <div on:click={() => {showModal[0] = true;}} class="card rounded-3xl bg-base-100 betterhover:shadow-xl
-                        w-[20vw]
+                        w-[30vw]
                     ">
                         <figure class="px-10 pt-10 justify-center content-center" style="display: flex">
                             <img class="mask mask-circle" style="width: auto; height: 150px;"
@@ -37,7 +44,7 @@
                         </div>
                     </div>
                     <div on:click={() => {showModal[1] = true;}} class="card rounded-3xl bg-base-100 betterhover:shadow-xl
-                        w-[20vw]
+                        w-[30vw]
                     ">
                         <figure class="px-10 pt-10 justify-center content-center" style="display: flex">
                             <img class="mask mask-circle" style="width: auto; height: 150px;"

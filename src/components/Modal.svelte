@@ -1,16 +1,16 @@
 <script>
 	import { createEventDispatcher, onDestroy } from 'svelte';
-    import {fade} from "svelte/transition";
+    import { fade } from "svelte/transition";
 
     const dispatch = createEventDispatcher();
 	const close = () => dispatch('close');
+  
 
 	let modal;
 
 	const handle_keyboard = (e) => {
 		if (e.key === 'Escape') {
-			close();
-			return;
+            close();
 		}
 
 		if (e.key === 'Tab') {
@@ -41,7 +41,7 @@
 
 <div id="open-modal" class="modal-window" transition:fade>
     <div class="shadow-2xl">
-        <a href="#" on:click={close} title="Close" class="modal-close">Close</a>
+        <button on:click={close} title="Close" class="modal-close">Close</button>
         <slot />
     </div>
 </div>
@@ -103,7 +103,7 @@
     color: black;
   }
 
-  a {
+  span {
     color: inherit;
     text-decoration: none;
   }
