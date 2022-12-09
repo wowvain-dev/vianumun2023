@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
 	import { goto, prefetchRoutes } from '$app/navigation';
 	import OrganizerProfile from '../components/OrganizerProfile.svelte';
 	import Navbar from '../components/Navbar.svelte';
@@ -43,7 +45,7 @@
 				<button
 					class="btn btn-lg btn-wide btn-primary"
 					on:click={() => {
-						goto('/apply');
+						goto('https://docs.google.com/forms/d/e/1FAIpQLSe8uqh672dAAtV42bJSdnasxbqxd6Ms81Q9aSL8rRFtENTgQw/viewform?usp=send_form');
 					}}>Apply Now!</button
 				>
 			</div>
@@ -316,7 +318,7 @@
 			<p>Hey everyone! </p><br/>
 			<p>My name is Mara and I’m a sophomore at “I.L. Caragiale'' National College. I enjoy everything related to media, marketing and public relations, therefore I am beyond excited to be this edition of VianuMUN’s Chief of Media! I am a very positive person, I am eager to learn, I enjoy facing challenges and experiencing new things.</p><br/>
 			<p>I love meeting people and making friends from everywhere and I must say that I am a huge perfectionist :) I cannot wait to meet you all and have a blast at this wonderful conference!</p><br/>
-			<p> See you in February 🫶🏻</p>
+			<p> See you in February 🫶</p>
 		</div>
 	</ProfileModal>
 {/if}

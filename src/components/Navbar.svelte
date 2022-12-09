@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	import { fade } from 'svelte/transition';
 	import {goto} from "$app/navigation";
-	import DeviceDetector from 'svelte-device-detector';
+	// import DeviceDetector from 'svelte-device-detector';
 
 	export let isVisible = true;
 
@@ -13,7 +13,7 @@
 	for (let committee in com) {
 		committees.push("/committees" + com[committee]);
 	}
-	console.log(committees);
+	// console.log(committees);
 
 </script>
 
@@ -31,10 +31,10 @@
 					{#if $page.url.pathname === '/apply'}
 						<li><a class="text-base-200 mr-5 text-base-100 uppercase
 							border-2 border-transparent underline underline-offset-8 hover:border-base-200 "
-							   href="/apply">Apply</a></li>
+							   href="https://docs.google.com/forms/d/e/1FAIpQLSe8uqh672dAAtV42bJSdnasxbqxd6Ms81Q9aSL8rRFtENTgQw/viewform?usp=send_form">Apply</a></li>
 					{:else}
 						<li><a class="mr-5 text-base-100 uppercase
-							border-2 border-transparent hover:border-base-200 " href="/apply">Apply</a></li>
+							border-2 border-transparent hover:border-base-200 " href="https://docs.google.com/forms/d/e/1FAIpQLSe8uqh672dAAtV42bJSdnasxbqxd6Ms81Q9aSL8rRFtENTgQw/viewform?usp=send_form">Apply</a></li>
 					{/if}
 
 					{#if $page.url.pathname === '/about'}
