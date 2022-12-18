@@ -38,6 +38,10 @@
         <div class="flex-col">
             <p class="flex-auto mt-10" ><b>Address</b>: Strada Arhitect Ion Mincu 10, Bucharest 011358</p>
         </div>
+
+        <div class="flex-col">
+            <p class="flex-auto mt-20"><b>Developer (for bug reports and/or inquiries)</b>: wowvain.dev@gmail.com</p>
+        </div>
     </div>
 
 </div>
