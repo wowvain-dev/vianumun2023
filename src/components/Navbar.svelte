@@ -34,7 +34,7 @@
 <svelte:window bind:innerWidth={width} />
 
 {#if isVisible}
-	{#if width != undefined && width != null && width <= 940}
+	{#if width !== undefined && width != null && width <= 940}
 		<div class="flex-col" transition:fade|local>
 			<div
 				class="flex flex-row flex-initial fixed mx-5 py-5 px-2 acrylic mt-3 rounded-lg z-[999]"
@@ -43,9 +43,8 @@
 				<div class="flex-1">
 					<a class="btn btn-ghost text-xl normal-case text-base-100" href="/">VianuMUN</a>
 				</div>
-				<div
+				<div onclick=""
 					class="flex-none mt-auto mb-auto justify-center content-center dropdown dropdown-end"
-					data-sveltekit-prefetch
 				>
 					<button class="btn btn-ghost">
 						<i class="fa fa-bars text-2xl text-base-100" />
@@ -55,7 +54,7 @@
 						style="background: rgba(29, 66, 58, 0.7)"
 					>
 						<div class="card-body">
-							<ul class="menu menu-vertical p-0" daha-sveltekit-prefetch>
+							<ul class="menu menu-vertical p-0" >
 								{#if $page.url.pathname === '/apply'}
 									<li>
 										<a
