@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 
-	import { goto, prefetchRoutes } from '$app/navigation';
+	import { goto } from '$app/navigation';
 	import OrganizerProfile from '../components/OrganizerProfile.svelte';
 	import Navbar from '../components/Navbar.svelte';
 	import { inview } from 'svelte-inview';

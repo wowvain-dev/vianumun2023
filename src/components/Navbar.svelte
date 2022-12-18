@@ -142,26 +142,26 @@
 								{/if}
 						</ul>
 					</li>
-					<li>
-						<a class="mr-5 text-base-100 uppercase border-2 border-transparent
-								  hover:border-base-200">
-							Our Team
-							<svg
-								class="fill-current"
-								xmlns="http://www.w3.org/2000/svg"
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-							>
-								<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-							</svg>
-						</a>
-						<ul class="p-2 bg-base-100 acrylic" style="background: rgba(29, 66, 58, 0.7)"
-						>
-							<li><a class="btn btn-ghost normal-case text-base-100 uppercase ">Chairpersons</a></li>
-							<li><a class="btn btn-ghost normal-case text-base-100 uppercase ">Submenu 2</a></li>
-						</ul>
-					</li>
+<!--					<li>-->
+<!--						<a class="mr-5 text-base-100 uppercase border-2 border-transparent-->
+<!--								  hover:border-base-200">-->
+<!--							Our Team-->
+<!--							<svg-->
+<!--								class="fill-current"-->
+<!--								xmlns="http://www.w3.org/2000/svg"-->
+<!--								width="20"-->
+<!--								height="20"-->
+<!--								viewBox="0 0 24 24"-->
+<!--							>-->
+<!--								<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />-->
+<!--							</svg>-->
+<!--						</a>-->
+<!--						<ul class="p-2 bg-base-100 acrylic" style="background: rgba(29, 66, 58, 0.7)"-->
+<!--						>-->
+<!--							<li><a class="btn btn-ghost normal-case text-base-100 uppercase ">Chairpersons</a></li>-->
+<!--							<li><a class="btn btn-ghost normal-case text-base-100 uppercase ">Submenu 2</a></li>-->
+<!--						</ul>-->
+<!--					</li>-->
 					{#if $page.url.pathname === '/contact'}
 						<li><a class="text-base-200 mr-5 text-base-100 uppercase
 							border-2 border-transparent underline underline-offset-8 hover:border-base-200 "
