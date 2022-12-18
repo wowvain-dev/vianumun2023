@@ -43,13 +43,14 @@
 				<div class="flex-1">
 					<a class="btn btn-ghost text-xl normal-case text-base-100" href="/">VianuMUN</a>
 				</div>
-				<div onclick=""
+				<div onclick="" tabindex="0"
 					class="flex-none mt-auto mb-auto justify-center content-center dropdown dropdown-end"
 				>
-					<button class="btn btn-ghost">
+					<button class="btn btn-ghost" tabindex="0">
 						<i class="fa fa-bars text-2xl text-base-100" />
 					</button>
 					<div
+						tabindex="0"
 						class="dropdown-content w-52 acrylic shadow card card-compact"
 						style="background: rgba(29, 66, 58, 0.7)"
 					>
