@@ -95,35 +95,43 @@
 			>
 				<MediaQuery query="(max-width: 1023px)" let:matches>
 					{#if matches}
-						<div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
-							{#each chairpersons as person}
-								{#if person.team === 'acad' && person.name !== 'Lucian Cismaru'}
-									<div
-										class="card"
-										style="display:flex; justify-content: center; align-content: center;"
-										on:click={() => (showModal[person.index] = true)}
-									>
-										<OrganizerProfile
-											name={person.name}
-											title={person.title}
-											image={person.image}
-											link={chairpersons[3].link}
-										/>
-									</div>
-								{/if}
-							{/each}
-						</div>
 						<div
-							class="card mt-10"
-							style="display:flex; justify-content: center; align-content: center;"
-							on:click={() => (showModal[chairpersons[3].index] = true)}
+							 style="display:flex; justify-content: center; align-content: center;"
 						>
-							<OrganizerProfile
-								name={chairpersons[3].name}
-								title={chairpersons[3].title}
-								image={chairpersons[3].image}
-								link={chairpersons[3].link}
-							/>
+							<div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+								{#each chairpersons as person}
+									{#if person.team === 'acad' && person.name !== 'Lucian Cismaru'}
+										<div
+												class="card"
+												style="display:flex; justify-content: center; align-content: center;"
+												on:click={() => (showModal[person.index] = true)}
+										>
+											<OrganizerProfile
+													name={person.name}
+													title={person.title}
+													image={person.image}
+													link={chairpersons[3].link}
+											/>
+										</div>
+									{/if}
+								{/each}
+							</div>
+
+						</div>
+						<div style="display:flex; justify-content: center; align-content: center;">
+							<div
+									class="card mt-10"
+									style="display:flex; justify-content: center; align-content: center;"
+									on:click={() => (showModal[chairpersons[3].index] = true)}
+							>
+								<OrganizerProfile
+										name={chairpersons[3].name}
+										title={chairpersons[3].title}
+										image={chairpersons[3].image}
+										link={chairpersons[3].link}
+								/>
+							</div>
+
 						</div>
 					{/if}
 				</MediaQuery>
@@ -180,23 +188,26 @@
 			>
 				<MediaQuery query="(max-width: 1023px)" let:matches>
 					{#if matches}
-						<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
-							{#each chairpersons as person}
-								{#if person.team === 'orga' && person.title !== 'Chief of Photography' && person.title !== 'Chief of Media'}
-									<div
-										class="card"
-										style="display:flex; text-align: center;"
-										on:click={() => (showModal[person.index] = true)}
-									>
-										<OrganizerProfile
-											name={person.name}
-											title={person.title}
-											image={person.image}
-											link={person.link}
-										/>
-									</div>
-								{/if}
-							{/each}
+						<div
+							style="display:flex; justify-content: center; align-content: center;"
+						>
+							<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+								{#each chairpersons as person}
+									{#if person.team === 'orga' && person.title !== 'Chief of Photography' && person.title !== 'Chief of Media'}
+										<div
+												class="card"
+												on:click={() => (showModal[person.index] = true)}
+										>
+											<OrganizerProfile
+													name={person.name}
+													title={person.title}
+													image={person.image}
+													link={person.link}
+											/>
+										</div>
+									{/if}
+								{/each}
+							</div>
 						</div>
 						<div
 							class="mt-10"
