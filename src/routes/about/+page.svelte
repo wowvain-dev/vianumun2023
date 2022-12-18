@@ -16,7 +16,7 @@
             {#if about === true}
                 <div in:fade|local>
                     <h1 class="font-bold text-5xl text-center mt-12">About us</h1>
-                    <div class="mx-5 md:mx-10 lg:mx-32 xl:mx-48">
+                    <div class="indent-class mx-5 md:mx-10 lg:mx-32 xl:mx-48">
                         <p class="mt-24">
                             The first edition of VianuMUN took place in May 2019, bringing an innovation to the MUN world: the INTERPOL committee.
                             Ever since then, our purpose has been to bring people together and to help them create unforgettable memories while taking part in our conference.
@@ -113,5 +113,7 @@
 </div>
 
 <style>
-
+    .indent-class {
+        @apply indent-[5%] text-xl;
+    }
 </style>
