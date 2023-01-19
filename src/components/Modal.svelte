@@ -39,14 +39,17 @@
 
 <svelte:window on:keydown={handle_keyboard}/>
 
-<div id="open-modal" class="modal-window" transition:fade>
-    <div class="shadow-2xl">
-        <button on:click={close} title="Close" class="modal-close">Close</button>
+<div id="open-modal" class="modal-window" >
+    <div>
         <slot />
     </div>
 </div>
 
 <style lang="scss">
+  .modal-left {
+
+  }
+
   .modal-window {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.25);
@@ -59,49 +62,18 @@
     opacity: 1;
     pointer-events: auto;
     & > div {
-      width: auto;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      max-height: 500px;
+      max-width: 720px;
       background: white;
+      display: flex;
+      flex-direction: column;
     }
   }
 
-  .modal-close {
-    color: #aaa;
-    line-height: 50px;
-    font-size: 80%;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 0;
-    width: 70px;
-    text-decoration: none;
-    &:hover {
-      color: black;
-    }
-  }
-
-  /* Demo Styles */
-
-  html,
-  body {
-    height: 100%;
-  }
-
-  html {
-    font-size: 18px;
-    line-height: 1.4;
-  }
-
-  body {
-    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
-    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    font-weight: 600;
-    background-image: linear-gradient(to right, #7f53ac 0, #657ced 100%);
-    color: black;
-  }
 
   span {
     color: inherit;
@@ -137,4 +109,44 @@
       }
     }
   }
+
+
+  //.modal {
+  //  position: fixed;
+  //  left: 0;
+  //  bottom: 0;
+  //  width: 100%;
+  //  height: 60px;
+  //  background: rgba(#333, 0.5);
+  //  display: flex;
+  //  flex-direction: column;
+  //  align-items: center;
+  //  justify-content: center;
+  //  transition: .4s;
+  //
+  //  &-container {
+  //    display: flex;
+  //    max-width: 720px;
+  //    width: 100%;
+  //    border-radius: 10px;
+  //    overflow: hidden;
+  //    position: absolute;
+  //    opacity: 0;
+  //    pointer-events: none;
+  //    transition-duration: 0.3s;
+  //    background: #fff;
+  //    transform: translateY(100px) scale(0.4);
+  //  }
+  //}
+  //
+  //@media (max-width: 750px) {
+  //  .modal-container {
+  //    width: 90%;
+  //  }
+  //  .modal-right {
+  //    display: none;
+  //  }
+  //}
+
+
 </style>

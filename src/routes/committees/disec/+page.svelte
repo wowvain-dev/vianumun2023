@@ -1,5 +1,5 @@
 <script>
-    import ProfileModal from "../../../components/ProfileModal.svelte";
+    import NewModal from "../../../components/NewModal.svelte";
 
     let showModal = [false, false];
 </script>
@@ -63,24 +63,24 @@
 </div>
 
 {#if showModal[0]}
-    <ProfileModal name="Alia Tănăsoiu" image="/profile_pictures/chairpersons/alia_tanasoiu_disec.jpg" visible={showModal[0]} onClose="{() => showModal[0] = false}">
+    <NewModal name="Alia Tănăsoiu" image="/profile_pictures/chairpersons/alia_tanasoiu_disec.jpg" visible={showModal[0]} on:close="{() => showModal[0] = false}">
         <div class="description indent-[5%] text-lg" style="display:flex; flex-direction: column; overflow: hidden;">
             <p>Greetings, prospective delegates! </p><br/>
             <p>My name is Alia Tănăsoiu and it's my utmost pleasure to chair the DISEC committee for this edition of VianuMUN, alongside Bianca.</p><br/>
             <p>I'm a junior at "Saint Sava'' National College, a gender equality activist, and a cat person. Over the last couple of months, MUNs have become one of my greatest passions, and I truly believe that everyone who experiences these types of conferences falls in love with them. As a chairperson, I always make sure that besides the challenging environment of debating, delegates also enjoy the fun parts of these conferences. Looking forward to meeting you all in February!&lt;3</p>
         </div>
-    </ProfileModal>
+    </NewModal>
 {/if}
 
 {#if showModal[1]}
-    <ProfileModal name="Bianca Constantin" image="/profile_pictures/chairpersons/bianca_constantin_disec.jpg" visible={showModal[1]} onClose="{() => showModal[1] = false}">
+    <NewModal name="Bianca Constantin" image="/profile_pictures/chairpersons/bianca_constantin_disec.jpg" visible={showModal[1]} on:close="{() => showModal[1] = false}">
         <div class="description indent-[5%] text-lg" style="display:flex; flex-direction: column; overflow: hidden;">
             <p>Hello! My name is Bianca Constantin, I’m a Junior at “Gheorghe Lazar” National College and it is my profound pleasure to take part in chairing the DISEC committee at Vianu MUN 2023 alongside Alia!❤</p><br/>
             <p>Saying that I am passionate about MUNs is too less, considering the fact that lately, they craved my whole personality and mentality. This is why I am beyond grateful for the experiences that I had and the people that I met here - and now, I want to give back to this amazing community all those beautiful feelings with which I was enchanted!</p><br/>
             <p>Vianu MUN is one of the conferences closest to my heart since, at the last year’s edition, I discovered a committee that passionates me a lot (the International Court of Justice)! And now, at this edition, I have the opportunity to experience an interesting and intense committee: DISEC!</p><br/>
             <p>I candidly hope that my prospective delegates will have ’’the time of their lives’’ as I had myself last year since I will give a piece of my heart to this committee and to this conference in order to make it memorable for every single delegate! </p>
         </div>
-    </ProfileModal>
+    </NewModal>
 {/if}
 <style>
     .card {
