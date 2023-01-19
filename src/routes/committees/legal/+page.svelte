@@ -1,5 +1,6 @@
 <script>
     import ProfileModal from "../../../components/ProfileModal.svelte";
+    import NewModal from "../../../components/NewModal.svelte";
 
     let showModal = [false, false]
 </script>
@@ -64,23 +65,23 @@
 </div>
 
 {#if showModal[0]}
-    <ProfileModal name="Alexandra Tilincă" image="/profile_pictures/chairpersons/alexandra_tilinca_legal.jpg" visible={showModal[0]} onClose="{() => showModal[0] = false}">
+    <NewModal name="Alexandra Tilincă" image="/profile_pictures/chairpersons/alexandra_tilinca_legal.jpg" visible={showModal[0]} on:close="{() => showModal[0] = false}">
         <div class="description indent-[5%] text-lg" style="display:flex; flex-direction: column; overflow: hidden;">
             <p>Hello, prospective delegates! My name is Alexandra, I’m a senior in high school and I cannot wait to chair the Legal Committee alongside Clara at this year’s edition of Vianu MUN!</p><br/>
             <p>Being part of last year’s edition, I knew I wanted to be part of the academic team, helping people fall in love with Vianu MUN just like I did. A few things about me: I’m a bookworm, I love psychology and I find international conflicts extremely interesting. </p><br/>
             <p>I can’t wait to meet you all!</p>
         </div>
-    </ProfileModal>
+    </NewModal>
 {/if}
 
 {#if showModal[1]}
-    <ProfileModal name="Clara Pistol" image="/profile_pictures/chairpersons/clara_pistol_legal.jpg" visible={showModal[1]} onClose="{() => showModal[1] = false}">
+    <NewModal name="Clara Pistol" image="/profile_pictures/chairpersons/clara_pistol_legal.jpg" visible={showModal[1]} on:close="{() => showModal[1] = false}">
         <div class="description indent-[5%] text-lg" style="display:flex; flex-direction: column; overflow: hidden;">
             <p>Hello there! My name is Clara, I am a junior at "Saint Sava" National College and I will be one of the chairs of the LEGAL Committee, alongside Alexandra🥰.</p><br/>
             <p>I am the type of person who doesn't like to sit still and in these MUN conferences I have found the perfect way to satisfy my need for "action", as well as meet an amazing assortment of brilliant people and expand my knowledge on various important topics.</p><br/>
             <p>Two years ago, when I was a freshman, VianuMUN was my first ever MUN conference; last year, I returned here again as a delegate, less afraid and more knowledgeable; this year, I am coming full circle, chairing the committee which started it all for me. Safe to say, I am beyond excited to be a part of this amazing conference and I am looking forward to meeting you all!🤍</p>
         </div>
-    </ProfileModal>
+    </NewModal>
 {/if}
 
 <style>

@@ -11,12 +11,14 @@
 	import MediaQuery from '../components/MediaQuery.svelte';
 	import chairpersons from '../components/chairpersons.json';
 	import ProfileModal from '../components/ProfileModal.svelte';
+	import NewModal from "../components/NewModal.svelte";
 
 	let showModal = [false, false, false, false, false, false, false, false, false];
 
 	// onMount(async () => {
 	// 	const res = await fetch('/');
 	// });
+
 </script>
 
 <div style="z-index: 999">
@@ -272,11 +274,11 @@
 </div>
 
 {#if showModal[0]}
-	<ProfileModal
+	<NewModal
 		name="Natalia Velea-Grumezea"
 		image="/profile_pictures/nati-secretary_general.jpg"
 		visible={showModal[0]}
-		onClose={() => (showModal[0] = false)}
+		on:close={() => (showModal[0] = false)}
 	>
 		<div
 			class="description indent-[5%] text-lg"
@@ -302,15 +304,15 @@
 				begins! 140 days left until you will have the best MUN experience!
 			</p>
 		</div>
-	</ProfileModal>
+	</NewModal>
 {/if}
 
 {#if showModal[1]}
-	<ProfileModal
+	<NewModal
 		name="Mara Andronache"
 		image="/profile_pictures/mara_andronache-deputy_secretary_general.jpg"
 		visible={showModal[1]}
-		onClose={() => (showModal[1] = false)}
+		on:close={() => (showModal[1] = false)}
 	>
 		<div
 			class="description indent-[5%] text-lg"
@@ -333,15 +335,15 @@
 				each and every person that reads this in February!
 			</p>
 		</div>
-	</ProfileModal>
+	</NewModal>
 {/if}
 
 {#if showModal[2]}
-	<ProfileModal
+	<NewModal
 		name="Ana Aronescu"
 		image="/profile_pictures/ana_aronescu-pga.jpg"
 		visible={showModal[2]}
-		onClose={() => (showModal[2] = false)}
+		on:close={() => (showModal[2] = false)}
 	>
 		<div
 			class="description indent-[5%] text-lg"
@@ -362,15 +364,15 @@
 			</p>
 			<p>~ Kisses. ♥️</p>
 		</div>
-	</ProfileModal>
+	</NewModal>
 {/if}
 
 {#if showModal[3]}
-	<ProfileModal
+	<NewModal
 		name="Lucian Cismaru"
 		image="/profile_pictures/lucian_cismaru-dpga.jpg"
 		visible={showModal[3]}
-		onClose={() => (showModal[3] = false)}
+		on:close={() => (showModal[3] = false)}
 	>
 		<div
 			class="description indent-[5%] text-lg"
@@ -393,15 +395,15 @@
 			<br />
 			<p>See you in February🥰!</p>
 		</div>
-	</ProfileModal>
+	</NewModal>
 {/if}
 
 {#if showModal[4]}
-	<ProfileModal
+	<NewModal
 		name="Alexandra Breahna"
 		image="/profile_pictures/alexandra_breahna-conference_manager.jpg"
 		visible={showModal[4]}
-		onClose={() => (showModal[4] = false)}
+		on:close={() => (showModal[4] = false)}
 	>
 		<div
 			class="description indent-[5%] text-lg"
@@ -429,15 +431,15 @@
 				crowd and a carefully chosen schedule for you to enjoy&lt;3
 			</p>
 		</div>
-	</ProfileModal>
+	</NewModal>
 {/if}
 
 {#if showModal[5]}
-	<ProfileModal
+	<NewModal
 		name="Andrei Voinea"
 		image="/profile_pictures/andrei_voinea-chief_of_staff.jpg"
 		visible={showModal[5]}
-		onClose={() => (showModal[5] = false)}
+		on:close={() => (showModal[5] = false)}
 	>
 		<div
 			class="description indent-[5%] text-lg"
@@ -451,15 +453,15 @@
 			</p>
 			<br />
 		</div>
-	</ProfileModal>
+	</NewModal>
 {/if}
 
 {#if showModal[6]}
-	<ProfileModal
+	<NewModal
 		name="Miruna Neamu"
 		image="/profile_pictures/neamu_miruna-chief_of_finance.jpg"
 		visible={showModal[6]}
-		onClose={() => (showModal[6] = false)}
+		on:close={() => (showModal[6] = false)}
 	>
 		<div
 			class="description indent-[5%] text-lg"
@@ -485,20 +487,19 @@
 			<br />
 			<p>This being said, I cannot wait to get to see your true potential at VianuMUN 2023!</p>
 		</div>
-	</ProfileModal>
+	</NewModal>
 {/if}
 
 {#if showModal[7]}
-	<ProfileModal
+	<NewModal
 		name="Andreea Fechet"
 		image="/profile_pictures/fechet_andreea-chief_of_photo.jpg"
 		visible={showModal[7]}
-		onClose={() => (showModal[7] = false)}
+		on:close={() => (showModal[7] = false)}
 	>
-		<div
-			class="description indent-[5%] text-lg"
-			style="display:flex; flex-direction: column; overflow: hidden;"
-		>
+<!--		<div-->
+<!--			class="indent-[5%] text-lg" style="overflow: auto; max-height: 500px"-->
+<!--		>-->
 			<p>Heyoo!</p>
 			<br />
 			<p>
@@ -523,21 +524,17 @@
 				I am really excited to be part of such an amazing project and I hope you are going to have a
 				wonderful experience!:DD
 			</p>
-		</div>
-	</ProfileModal>
+<!--		</div>-->
+	</NewModal>
 {/if}
 
 {#if showModal[8]}
-	<ProfileModal
+	<NewModal
 		name="Mara Bogdan"
 		image="/profile_pictures/mara_bogdan-chief_of_media.jpg"
 		visible={showModal[8]}
-		onClose={() => (showModal[8] = false)}
+		on:close={() => (showModal[8] = false)}
 	>
-		<div
-			class="description indent-[5%] text-lg"
-			style="display:flex; flex-direction: column; overflow: hidden;"
-		>
 			<p>Hey everyone!</p>
 			<br />
 			<p>
@@ -554,9 +551,35 @@
 			</p>
 			<br />
 			<p>See you in February 🫶</p>
-		</div>
-	</ProfileModal>
+	</NewModal>
 {/if}
+
+
+<!--<NewModal-->
+<!--		name="Mara Bogdan"-->
+<!--		image="/profile_pictures/mara_bogdan-chief_of_media.jpg"-->
+<!--		visible={showModal[8]}-->
+<!--		onClose={() => (showModal[8] = false)}-->
+<!--&gt;-->
+<!--	<div>-->
+<!--		<p>Hey everyone!</p>-->
+<!--		<br />-->
+<!--		<p>-->
+<!--			My name is Mara and I’m a sophomore at “I.L. Caragiale'' National College. I enjoy-->
+<!--			everything related to media, marketing and public relations, therefore I am beyond excited-->
+<!--			to be this edition of VianuMUN’s Chief of Media! I am a very positive person, I am eager to-->
+<!--			learn, I enjoy facing challenges and experiencing new things.-->
+<!--		</p>-->
+<!--		<br />-->
+<!--		<p>-->
+<!--			I love meeting people and making friends from everywhere and I must say that I am a huge-->
+<!--			perfectionist :) I cannot wait to meet you all and have a blast at this wonderful-->
+<!--			conference!-->
+<!--		</p>-->
+<!--		<br />-->
+<!--		<p>See you in February 🫶</p>-->
+<!--	</div>-->
+<!--</NewModal>-->
 
 <style>
 	.card {

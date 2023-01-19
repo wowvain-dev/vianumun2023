@@ -1,5 +1,6 @@
 <script>
     import ProfileModal from "../../../components/ProfileModal.svelte";
+    import NewModal from "../../../components/NewModal.svelte";
 
     let showModal = [false, false];
 </script>
@@ -60,23 +61,23 @@
 </div>
 
 {#if showModal[0]}
-    <ProfileModal name="Vlad Iliescu" image="/profile_pictures/chairpersons/vlad_iliescu_sc.jpg" visible={showModal[0]} onClose="{() => showModal[0] = false}">
+    <NewModal name="Vlad Iliescu" image="/profile_pictures/chairpersons/vlad_iliescu_sc.jpg" visible={showModal[0]} on:close="{() => showModal[0] = false}">
         <div class="description indent-[5%] text-lg" style="display:flex; flex-direction: column; overflow: hidden;">
             <p>Hey everyone! My name is Vlad, I’m 18 and I’m a senior at IBSB. I am passionate about history, international relations and music, especially playing guitar. </p><br/>
             <p>I am thrilled to be a chair of the Security Council, a committee which holds a special place in my heart, especially along with an amazing person like Cris beside me.</p><br/>
             <p>I look forward to the amazing debates that will be happening at the conference and I hope to find you all there in good spirits!</p>
         </div>
-    </ProfileModal>
+    </NewModal>
 {/if}
 
 {#if showModal[1]}
-    <ProfileModal name="Cristian Alexuc" image="/profile_pictures/chairpersons/cristian_alexuc_sc.jpg" visible={showModal[1]} onClose="{() => showModal[1] = false}">
+    <NewModal name="Cristian Alexuc" image="/profile_pictures/chairpersons/cristian_alexuc_sc.jpg" visible={showModal[1]} on:close="{() => showModal[1] = false}">
         <div class="description indent-[5%] text-lg" style="display:flex; flex-direction: column; overflow: hidden;">
             <p>Hello!! My name is Cris, I'm a huge MUN enthusiast and I am really exicted to be able to chair alongside my dear friend Vlad! </p><br/>
             <p>My personality type is ENTP and I love to fight and argue with people. Really passionate about classical writers, you can always find me talking about Albert Camus, Deleuze, Sartre and Dostoevsky.</p><br/>
             <p>I love making the most out of any situation and I am sure we will make you want to stick around the MUN community. It will be a committee you can NOT miss, so join me and Vlad, and resolve international issues in the Security Council!</p>
         </div>
-    </ProfileModal>
+    </NewModal>
 {/if}
 
 <style>
